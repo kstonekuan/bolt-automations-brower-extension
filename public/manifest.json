@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Bolt Automations by Squash",
   "version": "1.0.0",
-  "description": "Automates Bolt task monitoring and sends notifications to Discord",
+  "description": "Automate your bolt.new workflows to boost productivity!",
   "homepage_url": "https://www.trysquash.dev/",
   "icons": {
     "16": "assets/icon-16.png",
