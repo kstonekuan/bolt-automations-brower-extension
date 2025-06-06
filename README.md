@@ -23,10 +23,9 @@ Follow these steps to install the extension in your browser:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repo/bolt-automations.git
-   cd bolt-automations
+   git clone https://github.com/kstonekuan/bolt-automations-brower-extension.git
+   cd bolt-automations-browser-extension
    ```
-   *(Note: Replace `https://github.com/your-repo/bolt-automations.git` with the actual repository URL if different.)*
 
 2. **Install dependencies**:
    ```bash
