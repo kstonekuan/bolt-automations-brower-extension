@@ -1,5 +1,5 @@
-import { BackgroundListenerMessage, NotificationSentMessage } from '../src/chrome-messages';
-import { ExtractedContent } from '../src/types';
+import type { BackgroundListenerMessage, NotificationSentMessage } from '../src/chrome-messages';
+import type { ExtractedContent } from '../src/types';
 import { generateSummary, sendDiscordNotification } from '../src/utils/api';
 import { getSettings } from '../src/utils/storage';
 

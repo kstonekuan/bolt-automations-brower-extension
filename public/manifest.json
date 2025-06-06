@@ -22,8 +22,7 @@
     "activeTab"
   ],
   "host_permissions": [
-    "https://bolt.new/*",
-    "https://api.anthropic.com/*"
+    "https://bolt.new/*"
   ],
   "background": {
     "service_worker": "background/background.js",

@@ -20,7 +20,8 @@ async function buildContentScript() {
         }
       },
       outDir: resolve(__dirname, '../dist/content'),
-      emptyOutDir: false
+      emptyOutDir: false,
+      copyPublicDir: false
     }
   });
 }
