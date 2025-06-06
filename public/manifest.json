@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Bolt Automations by Squash",
+  "version": "1.0.0",
+  "description": "Automates Bolt task monitoring and sends notifications to Discord",
+  "homepage_url": "https://www.trysquash.dev/",
+  "icons": {
+    "16": "assets/icon-16.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "48": "assets/icon-48.png",
+      "128": "assets/icon-128.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://bolt.new/*",
+    "https://api.anthropic.com/*"
+  ],
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://bolt.new/*"],
+      "js": ["content/content.js"],
+      "type": "module"
+    }
+  ]
+}
