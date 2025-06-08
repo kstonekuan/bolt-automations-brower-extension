@@ -64,8 +64,8 @@ Stop burning through tokens and missing important updates. This Chrome extension
 ### AI Provider & API Key (Optional)
 Adds AI-powered summaries to notifications. Choose from:
 
-- **Anthropic (Claude 3 Haiku)**: Fast and cost-effective Claude model
 - **Google Gemini (2.0 Flash Lite)**: Google's lightweight and efficient model with a **free tier** - [see pricing](https://ai.google.dev/gemini-api/docs/pricing)
+- **Anthropic (Claude 3 Haiku)**: Fast and cost-effective Claude model
 - **OpenAI (GPT-4o Mini)**: OpenAI's optimized small model
 
 Without an API key: You get bolt's raw message  
