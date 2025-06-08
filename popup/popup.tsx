@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
 import { AlertCircle, Bell, Check, Globe, Info, Key, Save, Settings2, Zap } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import { NotificationSentMessage } from '../src/chrome-messages';
 import { Settings } from '../src/types';
 import { getSettings, saveSettings } from '../src/utils/storage';
@@ -273,8 +273,8 @@ export const Popup: React.FC = () => {
               value={settings.apiProvider}
               onChange={handleChange}
             >
-              <option value="anthropic">Anthropic (Claude 3 Haiku)</option>
               <option value="gemini">Google Gemini (2.0 Flash Lite)</option>
+              <option value="anthropic">Anthropic (Claude 3 Haiku)</option>
               <option value="openai">OpenAI (GPT-4o Mini)</option>
             </select>
           </div>
