@@ -5,16 +5,30 @@ import { Settings } from '../types';
  */
 export const getSettings = async (): Promise<Settings> => {
   try {
-    const result = await chrome.storage.sync.get(['anthropicApiKey', 'discordWebhookUrl', 'autoDiscussMode']);
+    const result = await chrome.storage.sync.get([
+      'apiProvider',
+      'anthropicApiKey', 
+      'geminiApiKey',
+      'openaiApiKey',
+      'discordWebhookUrl', 
+      'autoDiscussMode'
+    ]);
+    
     return {
+      apiProvider: result.apiProvider || 'anthropic',
       anthropicApiKey: result.anthropicApiKey || '',
+      geminiApiKey: result.geminiApiKey || '',
+      openaiApiKey: result.openaiApiKey || '',
       discordWebhookUrl: result.discordWebhookUrl || '',
-      autoDiscussMode: result.autoDiscussMode ?? false // Default to false
+      autoDiscussMode: result.autoDiscussMode ?? false
     };
   } catch (error) {
     console.error('Error getting settings:', error);
     return {
+      apiProvider: 'anthropic',
       anthropicApiKey: '',
+      geminiApiKey: '',
+      openaiApiKey: '',
       discordWebhookUrl: '',
       autoDiscussMode: false
     };
@@ -38,5 +52,21 @@ export const saveSettings = async (settings: Settings): Promise<void> => {
  */
 export const validateSettings = async (): Promise<boolean> => {
   const settings = await getSettings();
-  return !!settings.discordWebhookUrl; // Only Discord webhook is required
+  
+  // Discord webhook is always required
+  if (!settings.discordWebhookUrl) {
+    return false;
+  }
+  
+  // Check if the selected provider has its API key
+  switch (settings.apiProvider) {
+    case 'anthropic':
+      return !!settings.anthropicApiKey;
+    case 'gemini':
+      return !!settings.geminiApiKey;
+    case 'openai':
+      return !!settings.openaiApiKey;
+    default:
+      return false;
+  }
 };

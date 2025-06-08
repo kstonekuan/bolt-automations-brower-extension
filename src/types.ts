@@ -2,8 +2,13 @@
  * Types for the Bolt Automations extension
  */
 
+export type ApiProvider = 'anthropic' | 'gemini' | 'openai';
+
 export interface Settings {
-  anthropicApiKey?: string; // Made optional
+  apiProvider: ApiProvider;
+  anthropicApiKey?: string;
+  geminiApiKey?: string;
+  openaiApiKey?: string;
   discordWebhookUrl: string;
   autoDiscussMode: boolean; // Added auto-discuss mode setting
 }
@@ -55,4 +60,45 @@ export interface AnthropicResponse {
 
 export interface DiscordWebhookMessage {
   content: string;
+}
+
+// Gemini API types
+export interface GeminiContent {
+  parts: Array<{
+    text: string;
+  }>;
+}
+
+export interface GeminiRequest {
+  contents: GeminiContent[];
+}
+
+export interface GeminiResponse {
+  candidates: Array<{
+    content: {
+      parts: Array<{
+        text: string;
+      }>;
+    };
+  }>;
+}
+
+// OpenAI API types
+export interface OpenAIMessage {
+  role: 'system' | 'user' | 'assistant';
+  content: string;
+}
+
+export interface OpenAIRequest {
+  model: string;
+  messages: OpenAIMessage[];
+  max_tokens?: number;
+}
+
+export interface OpenAIResponse {
+  choices: Array<{
+    message: {
+      content: string;
+    };
+  }>;
 }

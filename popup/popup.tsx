@@ -7,7 +7,10 @@ import './popup.css';
 
 export const Popup: React.FC = () => {
   const [settings, setSettings] = useState<Settings>({
+    apiProvider: 'anthropic',
     anthropicApiKey: '',
+    geminiApiKey: '',
+    openaiApiKey: '',
     discordWebhookUrl: '',
     autoDiscussMode: false
   });
@@ -102,6 +105,51 @@ export const Popup: React.FC = () => {
     }
   };
 
+  // Get the API key field for the selected provider
+  const renderApiKeyField = () => {
+    const provider = settings.apiProvider;
+    const providerConfig = {
+      anthropic: {
+        label: 'Anthropic API Key',
+        placeholder: 'sk-ant-api...',
+        value: settings.anthropicApiKey,
+        name: 'anthropicApiKey'
+      },
+      gemini: {
+        label: 'Gemini API Key',
+        placeholder: 'AIza...',
+        value: settings.geminiApiKey,
+        name: 'geminiApiKey'
+      },
+      openai: {
+        label: 'OpenAI API Key',
+        placeholder: 'sk-...',
+        value: settings.openaiApiKey,
+        name: 'openaiApiKey'
+      }
+    };
+
+    const config = providerConfig[provider];
+
+    return (
+      <div className="form-group">
+        <label htmlFor={config.name}>
+          <Key size={14} style={{ marginRight: 4, verticalAlign: 'middle' }} />
+          {config.label} (AI Summaries)
+        </label>
+        <input
+          type="password"
+          id={config.name}
+          name={config.name}
+          className="form-control"
+          value={config.value}
+          onChange={handleChange}
+          placeholder={config.placeholder}
+        />
+      </div>
+    );
+  };
+
   return (
     <div className="container">
       <header className="header">
@@ -165,10 +213,18 @@ export const Popup: React.FC = () => {
             <div className="guide-item">
               <h3 className="guide-title">
                 <Key size={14} />
-                Anthropic API Key
+                AI Provider & API Key
               </h3>
               <p className="guide-text">
-                When provided, generate AI-powered summaries of Bolt's responses for richer Discord notifications. Without it, only Bolt's last message will be sent.
+                Choose your preferred AI provider for generating summaries. Each provider uses a specific model:
+              </p>
+              <ul className="guide-text mt-2 ml-4 list-disc">
+                <li><strong>Anthropic:</strong> Claude 3 Haiku</li>
+                <li><strong>Google Gemini:</strong> Gemini 2.0 Flash Lite</li>
+                <li><strong>OpenAI:</strong> GPT-4o Mini</li>
+              </ul>
+              <p className="guide-text mt-2">
+                Without an API key, only Bolt's last message will be sent.
               </p>
             </div>
           </div>
@@ -204,22 +260,26 @@ export const Popup: React.FC = () => {
               required
             />
           </div>
-          
+
           <div className="form-group">
-            <label htmlFor="anthropicApiKey">
-              <Key size={14} style={{ marginRight: 4, verticalAlign: 'middle' }} />
-              Anthropic API Key (AI Summaries)
+            <label htmlFor="apiProvider">
+              <Settings2 size={14} style={{ marginRight: 4, verticalAlign: 'middle' }} />
+              AI Provider
             </label>
-            <input
-              type="password"
-              id="anthropicApiKey"
-              name="anthropicApiKey"
+            <select
+              id="apiProvider"
+              name="apiProvider"
               className="form-control"
-              value={settings.anthropicApiKey}
+              value={settings.apiProvider}
               onChange={handleChange}
-              placeholder="sk-ant-api..."
-            />
+            >
+              <option value="anthropic">Anthropic (Claude 3 Haiku)</option>
+              <option value="gemini">Google Gemini (2.0 Flash Lite)</option>
+              <option value="openai">OpenAI (GPT-4o Mini)</option>
+            </select>
           </div>
+          
+          {renderApiKeyField()}
           
           <div className="button-group">
             <button 

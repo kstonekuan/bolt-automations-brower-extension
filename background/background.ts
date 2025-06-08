@@ -27,8 +27,15 @@ const handleTaskCompletion = async (content: ExtractedContent) => {
     // Generate content for notification
     let notificationContent: string;
     
-    if (settings.anthropicApiKey) {
-      // If API key is provided, generate summary
+    // Check if the selected provider has an API key
+    const hasApiKey = (
+      (settings.apiProvider === 'anthropic' && settings.anthropicApiKey) ||
+      (settings.apiProvider === 'gemini' && settings.geminiApiKey) ||
+      (settings.apiProvider === 'openai' && settings.openaiApiKey)
+    );
+    
+    if (hasApiKey) {
+      // If API key is provided for selected provider, generate summary
       notificationContent = await generateSummary(content);
     } else {
       // Otherwise, use the last Bolt message directly
@@ -75,8 +82,15 @@ const handleTestNotification = async () => {
     // Generate content for notification
     let notificationContent: string;
     
-    if (settings.anthropicApiKey) {
-      // If API key is provided, generate summary
+    // Check if the selected provider has an API key
+    const hasApiKey = (
+      (settings.apiProvider === 'anthropic' && settings.anthropicApiKey) ||
+      (settings.apiProvider === 'gemini' && settings.geminiApiKey) ||
+      (settings.apiProvider === 'openai' && settings.openaiApiKey)
+    );
+    
+    if (hasApiKey) {
+      // If API key is provided for selected provider, generate summary
       notificationContent = await generateSummary(dummyContent);
     } else {
       // Otherwise, use the dummy Bolt message directly

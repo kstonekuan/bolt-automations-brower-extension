@@ -20,7 +20,7 @@ Stop burning through tokens and missing important updates. This Chrome extension
 
 - ✅ **Smart Token Management**: Auto-enables discussion mode after task completion
 - 🔔 **Instant Discord Notifications**: Know immediately when bolt needs your attention
-- 🤖 **AI-Powered Summaries**: Get concise updates with Claude (optional)
+- 🤖 **AI-Powered Summaries**: Get concise updates with your choice of AI provider (optional)
 - 🔒 **Privacy First**: All credentials stored locally, never sent to external servers
 - ⚡ **Zero Config**: Works out of the box with just a Discord webhook
 
@@ -47,7 +47,7 @@ Stop burning through tokens and missing important updates. This Chrome extension
    - Click the extension icon
    - Make sure "Auto-enable discuss mode" is on
    - (Optional) Add your Discord webhook URL for notifications
-   - (Optional) Add Anthropic API key for AI summaries
+   - (Optional) Choose AI provider and add API key for AI summaries
    - Click "Save Settings"
    - You're done! 🎉
 
@@ -68,10 +68,15 @@ Stop burning through tokens and missing important updates. This Chrome extension
 2. Copy the webhook URL
 3. Paste in extension settings
 
-### Anthropic API Key (Optional)
-- Adds AI-powered summaries to notifications
-- Without it: You get bolt's raw message
-- With it: You get concise, actionable summaries
+### AI Provider & API Key (Optional)
+Adds AI-powered summaries to notifications. Choose from:
+
+- **Anthropic (Claude 3 Haiku)**: Fast and cost-effective Claude model
+- **Google Gemini (2.0 Flash Lite)**: Google's lightweight and efficient model with a **free tier** - [see pricing](https://ai.google.dev/gemini-api/docs/pricing)
+- **OpenAI (GPT-4o Mini)**: OpenAI's optimized small model
+
+Without an API key: You get bolt's raw message  
+With an API key: You get concise, actionable summaries
 
 ## Troubleshooting
 
@@ -81,7 +86,9 @@ Stop burning through tokens and missing important updates. This Chrome extension
 - Refresh the page after installing
 
 **AI summaries not working?**
-- Verify Anthropic API key and credits
+- Verify your API key is correct for the selected provider
+- Check that you have available credits/quota
+- Ensure you've selected the correct AI provider in settings
 - Check browser console for errors
 
 ## Development
