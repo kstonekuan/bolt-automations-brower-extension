@@ -15,7 +15,7 @@ export const getSettings = async (): Promise<Settings> => {
     ]);
     
     return {
-      apiProvider: result.apiProvider || 'anthropic',
+      apiProvider: result.apiProvider || 'gemini',
       anthropicApiKey: result.anthropicApiKey || '',
       geminiApiKey: result.geminiApiKey || '',
       openaiApiKey: result.openaiApiKey || '',
@@ -25,7 +25,7 @@ export const getSettings = async (): Promise<Settings> => {
   } catch (error) {
     console.error('Error getting settings:', error);
     return {
-      apiProvider: 'anthropic',
+      apiProvider: 'gemini',
       anthropicApiKey: '',
       geminiApiKey: '',
       openaiApiKey: '',

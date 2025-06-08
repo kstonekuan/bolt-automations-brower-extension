@@ -7,7 +7,7 @@ import './popup.css';
 
 export const Popup: React.FC = () => {
   const [settings, setSettings] = useState<Settings>({
-    apiProvider: 'anthropic',
+    apiProvider: 'gemini',
     anthropicApiKey: '',
     geminiApiKey: '',
     openaiApiKey: '',
