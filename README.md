@@ -26,24 +26,17 @@ Stop burning through tokens and missing important updates. This Chrome extension
 
 ## Quick Start
 
-### Install from Chrome Web Store (Recommended)
+### Install from Chrome Web Store
 *Coming soon!*
 
-### Install from Source
-1. Clone and build:
-   ```bash
-   git clone https://github.com/kstonekuan/bolt-automations-browser-extension.git
-   cd bolt-automations-browser-extension
-   npm install && npm run build
-   ```
+### Install from GitHub Release
+1. Download the latest release from [GitHub Releases](https://github.com/kstonekuan/bolt-automations-browser-extension/releases)
+2. Unzip to a folder
+3. Open `chrome://extensions` in Chrome
+4. Enable **Developer mode**
+5. Click **Load unpacked** and select the unzipped folder
 
-2. Load in Chrome:
-   - Go to `chrome://extensions`
-   - Enable **Developer mode**
-   - Click **Load unpacked**
-   - Select the `dist` folder
-
-3. Setup (2 minutes):
+### Setup (2 minutes):
    - Click the extension icon
    - Make sure "Auto-enable discuss mode" is on
    - (Optional) Add your Discord webhook URL for notifications
@@ -91,12 +84,19 @@ With an API key: You get concise, actionable summaries
 - Ensure you've selected the correct AI provider in settings
 - Check browser console for errors
 
-## Development
+## Installation
 
-```bash
-npm install
-npm run build
-```
+### Option 1: Install from Release (Easiest)
+1. Download the latest `bolt-automations-vX.X.X.zip` from [Releases](https://github.com/kstonekuan/bolt-automations-browser-extension/releases)
+2. Unzip the file to a folder on your computer
+3. Open Chrome and go to `chrome://extensions`
+4. Enable **Developer mode** (toggle in top right)
+5. Click **Load unpacked**
+6. Select the folder where you unzipped the extension
+7. You're ready to go! 🎉
+
+### Option 2: Build from Source
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup.
 
 ## Privacy & Security
 
