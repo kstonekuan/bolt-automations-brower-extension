@@ -1,20 +1,14 @@
-# Bolt Automations by Squash
+# <img src="public/assets/icon-128.png" alt="Bolt Automations Logo" width="32" align="center" /> Bolt Automations by Squash
 
-<p align="center">
-  <img src="public/assets/black_circle_360x360.png" alt="Powered by Bolt.new - Made in Bolt Hackathon" width="200" />
-</p>
+## 💰 Save Tokens, 🚀 Save Time. Ship faster with bolt.
 
-<p align="center">
-  <strong>Save tokens. Save time. Ship faster with bolt.new</strong>
-</p>
-
-<p align="center">
-  🏆 Built with Bolt for Bolt as part of the <a href="https://hackathon.dev/">World's Largest Hackathon presented by Bolt</a>
-</p>
+<div align="center">
+  <img src="public/assets/black_circle_360x360.png" alt="Powered by Bolt.new - Made in Bolt Hackathon" width="150" />
+  
+  🏆 Built with Bolt for Bolt as part of the [World's Largest Hackathon presented by Bolt](https://hackathon.dev/)
+</div>
 
 Stop burning through tokens and missing important updates. This Chrome extension automatically manages your bolt.new workflow to dramatically reduce token usage and keep you informed of every task completion, error, or required input.
-
-## 💰 Save Tokens, 🚀 Save Time
 
 ### How it saves your tokens
 - **Auto Discussion Mode**: Automatically switches bolt to discussion mode after each task completion
@@ -106,7 +100,29 @@ With an API key: You get concise, actionable summaries
 7. You're ready to go! 🎉
 
 ### Option 2: Build from Source
-See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kstonekuan/bolt-automations-browser-extension.git
+   cd bolt-automations-browser-extension
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Build the extension:
+   ```bash
+   npm run build
+   ```
+
+4. Load the extension in Chrome:
+   - Open `chrome://extensions`
+   - Enable **Developer mode**
+   - Click **Load unpacked**
+   - Select the `dist` folder
+
+For detailed development information, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Privacy & Security
 
