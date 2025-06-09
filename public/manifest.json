@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Bolt Automations by Squash",
   "version": "1.0.0",
-  "description": "Automate your bolt.new workflows to boost productivity!",
+  "description": "Save tokens and time on bolt.new with workflow automation and optimization.",
   "homepage_url": "https://www.trysquash.dev/",
   "icons": {
     "16": "assets/icon-16.png",
@@ -18,8 +18,7 @@
     }
   },
   "permissions": [
-    "storage",
-    "activeTab"
+    "storage"
   ],
   "host_permissions": [
     "https://bolt.new/*"

@@ -1,0 +1,89 @@
+Chrome Web Store Listing
+
+====================
+DESCRIPTION
+====================
+
+Stop burning through tokens and missing important updates on bolt.new!
+
+Bolt Automations dramatically reduces your token usage while keeping you informed of every task completion, error, or required input.
+
+💰 Save 90% of Your Tokens
+Our smart automation automatically switches bolt to discussion mode after each task completion. According to bolt.new official docs, Discussion Mode uses approximately 90% fewer tokens than Build Mode. This means massive savings on your AI costs while maintaining full productivity.
+
+🚀 Never Miss Important Updates
+Get instant Discord notifications when:
+• Tasks complete successfully
+• Errors occur that need your attention  
+• Bolt needs your input to continue
+• Any significant event happens in your workflow
+
+🤖 AI-Powered Summaries (Optional)
+Choose from three AI providers to get concise, actionable summaries instead of verbose outputs:
+• Google Gemini - Free tier available!
+• Anthropic Claude - Fast and efficient
+• OpenAI - Powerful and reliable
+
+✨ Key Features
+✅ Automatic Token Savings - Auto-enables discussion mode after task completion
+✅ Real-time Notifications - Know immediately when bolt needs your attention  
+✅ Smart Summaries - Get the essential information without the fluff
+✅ Privacy First - All credentials stored locally, never sent to external servers
+✅ Zero Configuration - Works immediately with just a Discord webhook
+
+🎯 Perfect For
+• Developers using bolt.new regularly
+• Teams collaborating on bolt projects
+• Anyone wanting to reduce AI token costs
+• Users who multitask and need notifications
+
+🔒 Privacy & Security
+• All API keys stored locally in your browser
+• No data sent to third parties
+• Only communicates with services you configure
+• Open source and transparent
+
+📝 How It Works
+1. Install the extension
+2. Check that auto-enable discuss mode is ticked
+3. (Optional) Add your Discord webhook URL for notifications
+4. (Optional) Add an AI API key for summaries
+5. Use bolt.new normally
+6. Save tokens and stay informed automatically!
+
+🔗 Helpful Resources
+• GitHub Repository: https://github.com/kstonekuan/bolt-automations-browser-extension
+• Token Efficiency Guide: https://support.bolt.new/best-practices/maximizing-token-efficiency
+• Google Gemini Free Tier: https://ai.google.dev/gemini-api/docs/pricing
+• Created by Squash: https://www.trysquash.dev/
+
+🏆 Built with Bolt for Bolt
+This extension was built with Bolt for Bolt as part of the World's Largest Hackathon presented by Bolt: https://hackathon.dev/
+
+Start saving tokens and time today - Install Bolt Automations now!
+
+====================
+CATEGORY
+====================
+Workflow & Planning
+
+====================
+SCREENSHOTS (1-5, at least 1 required)
+====================
+1. Main Interface - Simple, clean settings interface with one-click setup
+2. Token Savings - Automatic discussion mode activation saving 90% tokens
+3. Discord Notification - Real-time task completion notification example
+4. AI Summary - Concise AI-powered summary instead of verbose output
+5. Provider Selection - Choose from multiple AI providers including free options
+
+====================
+WHY THESE PERMISSIONS
+====================
+storage: Required to save your settings (API keys, webhook URLs, preferences) locally in your browser. Your data never leaves your device.
+
+bolt.new access: Required to monitor task completion and automatically switch to discussion mode for token savings. The extension only activates on bolt.new.
+
+====================
+SINGLE PURPOSE DESCRIPTION
+====================
+This extension automates bolt.new workflows by automatically switching to discussion mode after task completion (saving 90% tokens) and sending Discord notifications to keep you informed.

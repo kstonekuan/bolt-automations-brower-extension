@@ -1,6 +1,16 @@
 # Bolt Automations by Squash
 
-**Save tokens. Save time. Ship faster with bolt.new**
+<p align="center">
+  <img src="public/assets/black_circle_360x360.png" alt="Powered by Bolt.new - Made in Bolt Hackathon" width="200" />
+</p>
+
+<p align="center">
+  <strong>Save tokens. Save time. Ship faster with bolt.new</strong>
+</p>
+
+<p align="center">
+  🏆 Built with Bolt for Bolt as part of the <a href="https://hackathon.dev/">World's Largest Hackathon presented by Bolt</a>
+</p>
 
 Stop burning through tokens and missing important updates. This Chrome extension automatically manages your bolt.new workflow to dramatically reduce token usage and keep you informed of every task completion, error, or required input.
 
