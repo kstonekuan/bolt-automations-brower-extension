@@ -30,8 +30,8 @@ Stop burning through tokens and missing important updates. This Chrome extension
 
 ## Quick Start
 
-### Install from Chrome Web Store
-*Coming soon!*
+### Official Installation
+[Install from Chrome Web Store](https://chromewebstore.google.com/detail/fmigbfjaaleaddlpeihbbjgkcggccpnb)
 
 ### Install from GitHub Release
 1. Download the latest release from [GitHub Releases](https://github.com/kstonekuan/bolt-automations-browser-extension/releases)
